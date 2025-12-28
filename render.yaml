@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: n8n-calorie-app
+    env: docker
+    plan: free
+    region: ohio
+    envVars:
+      - key: N8N_ENCRYPTION_KEY
+        generateValue: true
+      - key: DB_TYPE
+        value: postgresdb
